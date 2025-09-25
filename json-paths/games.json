@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Number Theory",
+        "icon": "🔢",
+        "iframe_url": "https://number-theory-adventure.vercel.app/"
+    },
+    {
+        "name": "Indian History Quiz",
+        "icon": "🇮🇳",
+        "iframe_url": "https://indian-history-adventure.vercel.app/"
+    },
+    {
+        "name": "Smart Math Teacher",
+        "icon": "🧮",
+        "iframe_url": "https://smart-maths-teacher.vercel.app/"
+    }
+]

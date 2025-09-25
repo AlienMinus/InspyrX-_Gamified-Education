@@ -1,4 +1,6 @@
 import streamlit as st
+import json
+import os
 
 def render():
     st.header("PlayStation Page")
@@ -6,20 +8,17 @@ def render():
 
     st.subheader("Games Library")
 
-    games = [
-        {"name": "FIFA 25", "icon": "⚽", "path": "games/fifa25.html"},
-        {"name": "Gran Turismo", "icon": "🏎️", "path": "games/granturismo.html"},
-        {"name": "God of War", "icon": "🗡️", "path": "games/godofwar.html"},
-        {"name": "Tic-Tac-Toe", "icon": "❌", "path": "games/tictactoe.html"},
-        {"name": "Uncharted", "icon": "🧭", "path": "games/uncharted.html"},
-    ]
+    # Load games from JSON file
+    json_path = os.path.join(os.path.dirname(__file__), "./json-paths/games.json")
+    with open(json_path, "r", encoding="utf-8") as f:
+        games = json.load(f)
 
     selected_game_path = None
     cols = st.columns(len(games))
     for idx, game in enumerate(games):
         with cols[idx]:
             if st.button(game['icon'], key=game['name']):
-                selected_game_path = game['path']
+                selected_game_path = game['iframe_url']
             st.markdown(
                 f"""
                 <style>
@@ -48,8 +47,13 @@ def render():
 
     if selected_game_path:
         st.subheader("Now Playing:")
-        st.markdown(f"### {next(game['name'] for game in games if game['path'] == selected_game_path)}")
+        st.markdown(f"### {next(game['name'] for game in games if game['iframe_url'] == selected_game_path)}")
         st.components.v1.html(
-            f'<iframe src="{selected_game_path}" width="100%" height="100%"></iframe>',
-            height=600,
+            f"""
+            <div style="position:relative;width:100%;height:0;padding-bottom:56.25%;">
+                <iframe src="{selected_game_path}" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allowfullscreen></iframe>
+            </div>
+            """,
+            height=700,
+            scrolling=True
         )
