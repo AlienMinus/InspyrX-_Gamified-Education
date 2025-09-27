@@ -23,6 +23,12 @@ def render_page(page_name):
 
 # --- Main app configuration ---
 st.set_page_config(page_title="Hackathon2025 UI", page_icon="🎮")
+st.markdown("""
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7581861713562502"
+     crossorigin="anonymous"></script>
+</head>
+""",  unsafe_allow_html=True)
 st.title("Hackathon2025 UI")
 page = st.sidebar.radio(
     "Navigation Menu",

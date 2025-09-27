@@ -1,20 +1,38 @@
 {
     "projects": [
         {
-            "title": "Minecraft Online",
-            "url": "https://scratch.mit.edu/projects/1189258928/embed"
+            "title": "Math",
+            "icon": "🔢",
+            "url": "https://scratch.mit.edu/projects/1301310/embed"
+        },
+        {
+            "title": "Earth",
+            "icon": "🌍",
+            "url": "https://scratch.mit.edu/projects/10265899/embed"
         },
         {
             "title": "Super Mario Vivacious",
+            "icon": "🎮",
             "url": "https://scratch.mit.edu/projects/1190836109/embed"
         },
         {
-            "title": "Goku v/s Broly",
-            "url": "https://scratch.mit.edu/projects/1189149454/embed"
+            "title": "Geometry Dash",
+            "icon": "🏃‍♂️",
+            "url": "https://scratch.mit.edu/projects/1198098641/embed"
         },
         {
-            "title": "Geometry Dash",
-            "url": "https://scratch.mit.edu/projects/1198098641/embed"
-        }
+            "title": "Evolution",
+            "icon": "🦖",
+            "url": "https://scratch.mit.edu/projects/354315916/embed"
+        },
+        {
+            "title": "The Planets",
+            "icon": "🌌",
+            "url": "https://scratch.mit.edu/projects/93357747/embed"
+        },
+        {
+            "title": "Vidyut",
+            "icon": "⚡",
+            "url": "https://scratch.mit.edu/projects/1217211531/embed"}
     ]
 }

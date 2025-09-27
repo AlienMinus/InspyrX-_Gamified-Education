@@ -25,7 +25,7 @@ def render():
     cols = st.columns(len(projects))
     for idx, project in enumerate(projects):
         with cols[idx]:
-            if st.button("🟧", key=project.get('title', f"project_{idx}")):
+            if st.button(project['icon'], key=project.get('title', f"project_{idx}")):
                 selected_game_path = project['url']
             st.markdown(
                 f"""
