@@ -49,7 +49,6 @@ def render():
             "></section>
            
         </fieldset>
-        <footer style='margin-top: 2%; color: rgb(0, 0, 0);'> @ All Copy-Rights Reserved to <a href="https://github.com/AlienMinus" style='color: black;'>Minus</a></footer>
     </div>
     <script src="https://www.geogebra.org/apps/deployggb.js"></script>
     <script>
