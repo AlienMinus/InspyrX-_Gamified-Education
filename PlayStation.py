@@ -55,5 +55,7 @@ def render():
             </div>
             """,
             height=700,
-            scrolling=True
+            scrolling=True,
+            seamless=True,
+            unsafe_allow_html=True
         )
