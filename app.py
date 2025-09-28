@@ -1,11 +1,9 @@
 # Import the necessary libraries, including the new chatbot module
 import streamlit as st
-import geogebra
-import scratch
-import PlayStation
-from spyrotron import ai_chatbot # Import the new ai_chatbot function
-import documentation
+from pages import geogebra, scratch, PlayStation, documentation
+from pages.spyrotron import ai_chatbot
 
+# Set the page configuration
 st.set_page_config(page_title="Hackathon2025 UI", page_icon="🎮")
 
 def render_page(page_name):
@@ -39,3 +37,4 @@ page = st.sidebar.radio(
     ["PlayStation", "GeoGebra", "Scratch3.0", "Spyrotron AI", "Documentation"]
 )
 render_page(page)
+
