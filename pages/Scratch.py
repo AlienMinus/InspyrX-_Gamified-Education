@@ -4,7 +4,7 @@ import os
 
 def load_projects():
     """Loads scratch projects from a JSON file."""
-    json_path = os.path.join(os.path.dirname(__file__), './json-paths/scratch_projects.json')
+    json_path = os.path.join(os.path.dirname(__file__), '../json-paths/scratch_projects.json')
     try:
         with open(json_path, 'r', encoding='utf-8') as f:
             return json.load(f).get("projects", [])

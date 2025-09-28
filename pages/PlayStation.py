@@ -9,7 +9,7 @@ def render():
     st.subheader("Games Library")
 
     # Load games from JSON file
-    json_path = os.path.join(os.path.dirname(__file__), "./json-paths/games.json")
+    json_path = os.path.join(os.path.dirname(__file__), "../json-paths/games.json")
     with open(json_path, "r", encoding="utf-8") as f:
         games = json.load(f)
 
