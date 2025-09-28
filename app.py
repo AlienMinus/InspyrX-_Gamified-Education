@@ -1,7 +1,7 @@
 # Import the necessary libraries, including the new chatbot module
 import streamlit as st
-from pages import geogebra, scratch, PlayStation, documentation
-from pages.spyrotron import ai_chatbot
+from pages import GeoGebra, Scratch, PlayStation, Documentation
+from pages.Spyrotron import ai_chatbot
 
 # Set the page configuration
 st.set_page_config(page_title="Hackathon2025 UI", page_icon="🎮")
@@ -13,14 +13,14 @@ def render_page(page_name):
     if page_name == "PlayStation":
         PlayStation.render()
     elif page_name == "GeoGebra":
-        geogebra.render()
+        GeoGebra.render()
     elif page_name == "Scratch3.0":
-        scratch.render()
+        Scratch.render()
     elif page_name == "Spyrotron AI":
         # Call the function from the separate chatbot.py file
         ai_chatbot()
     elif page_name == "Documentation":
-        documentation.render()
+        Documentation.render()
     else:
         st.error("Page not found")
 
