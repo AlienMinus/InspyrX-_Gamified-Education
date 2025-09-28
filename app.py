@@ -1,8 +1,8 @@
 import streamlit as st
-import geogebra, scratch, spyrotron, PlayStation, documentation
+import geogebra, scratch, PlayStation, documentation
 from spyrotron import ai_chatbot
 
-st.set_page_config(page_title="Hackathon2025 UI", page_icon="🎮")
+st.set_page_config(page_title="InspyrX", page_icon="🎮")
 
 def render_page(page_name):
     if page_name == "PlayStation":
@@ -19,7 +19,6 @@ def render_page(page_name):
         st.error("Page not found")
 
 # --- Main app configuration ---
-st.title("Hackathon2025 UI")
 page = st.sidebar.radio(
     "Navigation Menu",
     ["PlayStation", "GeoGebra", "Scratch3.0", "Spyrotron AI", "Documentation"]
