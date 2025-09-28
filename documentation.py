@@ -9,7 +9,7 @@ def render():
 
     with tab1:
         st.subheader("InspyrX.pdf")
-        pdf_file = "../docs/InspyrX.pdf"
+        pdf_file = "./docs/InspyrX.pdf"
         if os.path.exists(pdf_file):
             with open(pdf_file, "rb") as f:
                 base64_pdf = base64.b64encode(f.read()).decode('utf-8')
@@ -23,7 +23,7 @@ def render():
 
     with tab2:
         st.subheader("README.md")
-        readme_file = "../README.md"
+        readme_file = "./README.md"
         if os.path.exists(readme_file):
             with open(readme_file, "r", encoding="utf-8") as f:
                 readme_content = f.read()

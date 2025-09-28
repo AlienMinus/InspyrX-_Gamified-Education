@@ -2,31 +2,23 @@ import streamlit as st
 import json
 import os
 
-def load_projects():
-    """Loads scratch projects from a JSON file."""
-    json_path = os.path.join(os.path.dirname(__file__), '../json-paths/scratch_projects.json')
-    try:
-        with open(json_path, 'r', encoding='utf-8') as f:
-            return json.load(f).get("projects", [])
-    except Exception as e:
-        st.error(f"Error loading projects: {e}")
-        return []
-
 def render():
-    st.header("Scratch Page")
-    st.write("Welcome to the Scratch page! Click a project to view it.")
+    st.header("PlayStation Page")
+    st.write("Welcome to the PlayStation page!")
 
-    projects = load_projects()
-    if not projects:
-        st.warning("No Scratch projects found. Please add projects to `scratch_projects.json`.")
-        return
+    st.subheader("Games Library")
+
+    # Load games from JSON file
+    json_path = os.path.join(os.path.dirname(__file__), "./json-paths/games.json")
+    with open(json_path, "r", encoding="utf-8") as f:
+        games = json.load(f)
 
     selected_game_path = None
-    cols = st.columns(len(projects))
-    for idx, project in enumerate(projects):
+    cols = st.columns(len(games))
+    for idx, game in enumerate(games):
         with cols[idx]:
-            if st.button(project['icon'], key=project.get('title', f"project_{idx}")):
-                selected_game_path = project['url']
+            if st.button(game['icon'], key=game['name']):
+                selected_game_path = game['iframe_url']
             st.markdown(
                 f"""
                 <style>
@@ -51,11 +43,11 @@ def render():
                 """,
                 unsafe_allow_html=True
             )
-            st.write(project['title'])
+            st.write(game['name'])
 
     if selected_game_path:
         st.subheader("Now Playing:")
-        st.markdown(f"### {next(project['title'] for project in projects if project['url'] == selected_game_path)}")
+        st.markdown(f"### {next(game['name'] for game in games if game['iframe_url'] == selected_game_path)}")
         st.components.v1.html(
             f"""
             <div style="position:relative;width:100%;height:0;padding-bottom:56.25%;">
@@ -63,5 +55,5 @@ def render():
             </div>
             """,
             height=700,
-            scrolling=True
+            scrolling=True,
         )
