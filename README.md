@@ -109,7 +109,7 @@ Try the working prototype here:
 ---
 
 ## 📎 Project Presentation
-Below is the embedded documentation for this project (`InspyrX.pdf`):
+Below is the embedded documentation for this project (`InspyrX.pdf`):  
 [📄 Download InspyrX.pdf](./docs/InspyrX.pdf)
 
 > _Note: PDF preview is available in the Streamlit app and when opened locally. GitHub only allows download._
@@ -121,7 +121,7 @@ Below is the embedded documentation for this project (`InspyrX.pdf`):
 | Role                      | Name           |
 |---------------------------|----------------|
 | Project Lead & Strategist, Backend & API Integration | Manas R. Das    |
-| Frontend & UI/UX          | Suryakanta Senapati, Dibyarani behera, Subhashree Prusty, Suryakant Swain  |
+| Frontend & UI/UX          | Suryakanta Senapati,  Dibyarani behera,  Subhashree Prusty,  Suryakant Swain  |
 | Research & Documentation  | Sanskritee Behera  |
 
 ---
@@ -141,8 +141,8 @@ We extend our gratitude to the Smart India Hackathon 2025 organizers, mentors, a
 ## 📫 Contact
 
 For inquiries, collaborations, or contributions, reach out at:  
-✉️ 23ece189@abit.edu.in
-🌐 https://inspyrx.streamlit.app
+✉️ 23ece189@abit.edu.in  
+🌐 https://inspyrx.streamlit.app  
 
 ---
 
